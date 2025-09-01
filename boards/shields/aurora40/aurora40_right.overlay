@@ -1,5 +1,0 @@
-#include "aurora40.dtsi"
-
-&default_transform {
-    col-offset = <20>;
-};

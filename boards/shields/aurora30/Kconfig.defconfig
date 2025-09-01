@@ -1,4 +1,4 @@
-if SHIELD_AURORA40_LEFT
+if SHIELD_AURORA30_LEFT
 
 config ZMK_BLE
 	default y
@@ -7,14 +7,14 @@ config ZMK_USB
 	default y
 
 config ZMK_KEYBOARD_NAME
-    default "Aurora40"
+    default "Aurora30"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_AURORA40_LEFT || SHIELD_AURORA40_RIGHT
+if SHIELD_AURORA30_LEFT || SHIELD_AURORA40_RIGHT
 
 config ZMK_SPLIT
     default y

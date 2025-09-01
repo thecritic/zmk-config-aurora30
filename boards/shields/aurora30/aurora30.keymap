@@ -1,0 +1,25 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/* Layers */
+#define AL1 0
+
+/ { 
+    //      ----------------------    ----------------------
+    //      | 00  01  02  03  04 |    | 05  06  07  08  09 |
+    //      | 10  11  12  13  14 |    | 15  16  17  18  19 |
+    //      | 20  21  22  23  24 |    | 25  26  27  28  29 |
+    //      ----------------------    ----------------------
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        alpha1 {
+            bindings = <
+                &kp F       &kp Y       &kp O       &kp U       &kp Z               &kp Q      &kp K       &kp L       &kp C       &kp B
+                &kp H       &kp I       &kp E       &kp A       &kp COMMA           &kp M      &kp T       &kp R       &kp S       &kp N
+                &kp J       &kp X       &kp FSLH    &kp DOT     &kp APOS            &kp G      &kp D       &kp W       &kp V       &kp P
+            >;
+        };
+    };
+};

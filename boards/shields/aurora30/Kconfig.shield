@@ -1,0 +1,7 @@
+# No whitespace after comma or in name!
+
+config SHIELD_AURORA30_LEFT
+    def_bool $(shields_list_contains,aurora30_left)
+
+config SHIELD_AURORA30_RIGHT
+    def_bool $(shields_list_contains,aurora30_right)

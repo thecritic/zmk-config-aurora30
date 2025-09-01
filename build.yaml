@@ -20,6 +20,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: aurora40_left
+    shield: aurora30_left
   - board: nice_nano_v2
-    shield: aurora40_right
+    shield: aurora30_right
