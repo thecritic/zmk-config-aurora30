@@ -4,7 +4,10 @@
 /* Layers */
 #define AL1 0
 #define AL2 1
-#define SYM 2
+#define AL3 2
+#define QUI 3
+#define SYM 4
+#define FUN 5
 
 / { 
     //      ----------------------    ----------------------
@@ -23,24 +26,52 @@
                 &kp F       &kp Y       &kp O       &kp U       &kp Z               &kp Q      &kp K       &kp L       &kp C       &kp B
                 &kp H       &kp I       &kp E       &kp A       &kp COMMA           &kp M      &kp T       &kp R       &kp S       &kp N
                 &kp J       &kp X       &kp FSLH    &kp DOT     &kp APOS            &kp G      &kp D       &kp W       &kp V       &kp P
-                &to AL2     &none       &none       &kp RET     &kp SPACE           &mo SYM    &kp BSPC    &none       &none       &none
+                &none       &none       &none       &kp LSHFT   &kp SPACE           &mo QUI    &mo SYM     &mo FUN     &to AL3     &to AL2
             >;
         };
         // Dvorak :(
         alpha2 {
             bindings = <
-                &kp LGUI    &kp LALT    &kp LCTRL   &kp P       &kp Y               &kp F      &kp G       &kp C       &kp R       &kp L
+                &kp APOS    &kp COMMA   &kp DOT     &kp P       &kp Y               &kp F      &kp G       &kp C       &kp R       &kp L
                 &kp A       &kp O       &kp E       &kp U       &kp I               &kp D      &kp H       &kp T       &kp N       &kp S
-                &kp TAB     &kp Q       &kp J       &kp K       &kp X               &kp B      &kp M       &kp W       &kp V       &kp Z
-                &to AL1     &trans      &trans      &trans      &trans              &trans     &trans      &trans      &trans      &trans
+                &kp FSLH    &kp Q       &kp J       &kp K       &kp X               &kp B      &kp M       &kp W       &kp V       &kp Z
+                &trans      &trans      &trans      &trans      &trans              &trans     &trans      &trans      &to AL3     &to AL1
             >;
         };
-        sym {
+        // Qwerty/Gaming mode
+        alpha3 {
             bindings = <
-                &kp APOS    &kp N3      &kp N4     &kp N7    &kp DOT               &kp COMMA    &kp RBRC       &kp LBRC       &kp DQT        &kp FSLH
-                &kp UNDER   &kp N0      &kp N1     &kp N2    &kp N9                &kp EXCL     &kp RPAR       &kp LPAR       &kp SEMI       &kp MINUS
-                &kp AT      &kp N5      &kp N6     &kp N8    &kp PRCNT             &kp STAR     &kp AMPS       &kp HASH       &kp DLLR       &kp EQUAL
-                &kp PIPE    &kp CARET   &kp LT     &kp GT    &sk LSHFT             &none        &kp BSLH       &mt GRAVE TILDE &kp PLUS       &kp COLON
+                &kp ESC       &kp N1      &kp N2      &kp N3      &kp N4              &none      &none       &none       &none       &none
+                &kp TAB       &kp Q       &kp W       &kp E       &kp R               &none      &none       &none       &none       &none
+                &kp LCTRL     &kp A       &kp S       &kp D       &kp F               &none      &none       &none       &none       &kp RET
+                &kp LSHFT     &kp Z       &kp X       &kp C       &kp SPACE           &none      &none       &none       &to AL1     &to AL2
+            >;
+        };
+        // Common quick-access functions and numbers
+        quick {
+            bindings = <
+                &none       &kp N3      &kp N4     &kp N7    &none                 &none        &sk LALT       &sk LCTRL      &sk LGUI       &none   
+                &kp N9      &kp N0      &kp N1     &kp N2    &none                 &none        &kp RET        &kp BSPC       &kp TAB        &kp ESC     
+                &none       &kp N5      &kp N6     &kp N8    &none                 &none        &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT    
+                &none       &none       &none      &none     &none                 &none        &none          &none          &none          &none
+            >;
+        };
+        // Symbols
+        symbols {
+            bindings = <
+                &kp COLON   &kp DQT     &kp LBKT   &kp LBRC  &kp AT                &none        &kp RBRC       &kp RBKT       &kp PIPE       &kp CARET
+                &kp LT      &kp MINUS   &kp LPAR   &kp SEMI  &kp EQUAL             &none        &kp STAR       &kp RPAR       &kp UNDER      &kp GT  
+                &kp QMARK   &kp EXCL    &kp AMPS   &kp HASH  &kp PRCNT             &none        &kp PLUS       &kp BSLH       &kp DLLR       &mt GRAVE TILDE
+                &none       &none       &none      &none     &none                 &none        &none          &none          &none          &none
+            >;
+        };
+        // Everything else
+        function {
+            bindings = <
+                &none       &kp F3      &kp F4     &kp F7    &none                 &none        &kp CAPS       &kp DEL        &kp INS        &none     
+                &kp F9      &kp F11     &kp F1     &kp F2    &kp K_COPY            &none        &kp PG_UP      &kp PG_DN      &kp HOME       &kp END  
+                &none       &kp F5      &kp F6     &kp F8    &kp K_PASTE           &none        &kp C_VOL_UP   &kp C_VOL_DN   &kp C_MUTE     &none    
+                &none       &none       &none      &none     &none                 &none        &none          &none          &none          &none
             >;
         };
     };
