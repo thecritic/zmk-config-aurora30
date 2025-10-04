@@ -45,7 +45,7 @@
         combo_to3 {
             timeout-ms = <20>;
             key-positions = <12 13>;
-            bindings = <&to 13>;
+            bindings = <&to 3>;
         };
         combo_lbkt {
             timeout-ms = <20>;
