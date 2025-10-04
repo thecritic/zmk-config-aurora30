@@ -129,11 +129,6 @@
         };
         combo_excl {
             timeout-ms = <20>;
-            key-positions = <15 16>;
-            bindings = <&kp EXCL>;
-        };
-        combo_excl {
-            timeout-ms = <20>;
             key-positions = <1 2>;
             bindings = <&kp EXCL>;
         };
