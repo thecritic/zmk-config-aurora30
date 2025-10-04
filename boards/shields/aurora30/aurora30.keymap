@@ -1,6 +1,11 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
+#include <dt-bindings/zmk/pointing.h>
+
+
 /* Layers */
 #define AL1 0
 
@@ -14,11 +19,59 @@
     keymap {
         compatible = "zmk,keymap";
 
-        alpha1 {
+        layer0 {
             bindings = <
-                &kp F       &kp Y       &kp O       &kp U       &kp Z               &kp Q      &kp K       &kp L       &kp C       &kp B
-                &kp H       &kp I       &kp E       &kp A       &kp COMMA           &kp M      &kp T       &kp R       &kp S       &kp N
-                &kp J       &kp X       &kp FSLH    &kp DOT     &kp APOS            &kp G      &kp D       &kp W       &kp V       &kp P
+                &kp Q       &kp W       &kp F       &lt 6 P       &kp B               &kp J             &lt 1 L       &lt 5 U     &kp Y       &kp SEMI
+                &kp A       &mt LGUI R  &mt LALT S  &mt LCTRL T   &kp G               &kp M             &mt LCTRL N   &mt LALT E  &mt LGUI I  &kp O
+                &kp Z       &kp X       &kp C       &lt 1 D       &mt LSHFT V         &mt LSHFT SPACE   &lt 2 K       &lt 6 H     &kp COMMA   &kp DOT
+            >;
+        };
+
+        layer1 {
+            bindings = <
+              &none &none &none &none &none    &none    &none     &none   &none     &none
+              &none &none &none &none &none    &kp LEFT &kp DOWN  &kp UP  &kp RIGHT &none
+              &none &none &none &none &none    &none    &none     &none   &none     &none
+            >;
+        };
+
+        layer2 {
+            bindings = <
+              &none &none &none &none &none    &none    &none     &kp N7  &kp N8  &kp N9
+              &none &none &none &none &none    &none    &kp N0    &kp N4  &kp N5  &kp N6
+              &none &none &none &none &none    &none    &none     &kp N1  &kp N2  &kp N3
+            >;
+        };
+
+        layer3 {
+            bindings = <
+              &none           &mkp MCLK   &mkp LCLK   &none           &none             &none             &none               &msc SCRL_UP    &none             &none
+              &msc SCRL_LEFT  &mo 5       &none       &mo 4           &kp LSHFT         &mmv MOVE_LEFT    &mmv MOVE_DOWN      &mmv MOVE_UP    &mmv MOVE_RIGHT   &msc SCRL_RIGHT
+              &kp LCTRL       &kp LGUI    &kp LALT    &msc SCRL_DOWN  &mkp LCLK         &none             &mkp LCLK           &mkp MCLK       &mkp RCLK         &kp LSHFT
+            >;
+        };
+
+        layer4 {
+            bindings = <
+              &none &none &none &none &none    &none        &none   &none   &none         &none
+              &none &none &none &none &none    &kp K_BACK   &none   &none   &kp K_FORWARD &none
+              &none &none &none &none &none    &none        &none   &none   &none         &none
+            >;
+        };
+
+        layer5 {
+            bindings = <
+              &none &none &none &none &none    &kp LG(J)  &kp LG(L)   &none       &none &none
+              &none &none &none &none &none    &none      &none       &none       &none &none
+              &none &none &none &none &none    &none      &kp LG(K)   &kp LG(H)   &none &none
+            >;
+        };
+
+        layer6 {
+            bindings = <
+              &kp F1  &kp F2  &kp F3  &kp F4  &kp F5      &kp LG(LC(J))   &kp LG(LC(L))   &kp LG(LC(U))     &kp LG(LC(Y))   &kp LG(LC(SEMI))
+              &kp F6  &kp F7  &kp F8  &kp F9  &kp F10     &none           &none           &none             &none           &none
+              &none   &none   &none   &kp F11 &kp F12     &none           &none           &none             &none           &none
             >;
         };
     };
