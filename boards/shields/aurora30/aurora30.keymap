@@ -5,6 +5,7 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
 #include <dt-bindings/zmk/pointing.h>
 
+#define HT(hold, tap) &ht hold tap
 
 /* Layers */
 #define AL1 0
@@ -223,7 +224,7 @@
                 // 0        1           2           3             4                   5                 6             7           8           9
                 &kp Q       &kp W       &kp F       &lt 6 P       &kp B               &kp J             &lt 1 L       &lt 5 U     &kp Y       &kp SEMI
                 // 10       11          12          13            14                  15                16            17          18          19
-                &ht A AT    &mt LGUI R  &mt LALT S  &mt LCTRL T   &kp G               &kp M             &mt LCTRL N   &mt LALT E  &mt LGUI I  &kp O
+                HT(A,AT)    &mt LGUI R  &mt LALT S  &mt LCTRL T   &kp G               &kp M             &mt LCTRL N   &mt LALT E  &mt LGUI I  &kp O
                 // 20       21          22          23            24                  25                26            27          28          29
                 &kp Z       &kp X       &kp C       &lt 1 D       &mt LSHFT V         &mt LSHFT SPACE   &lt 2 K       &lt 6 H     &kp COMMA   &kp DOT
             >;
@@ -247,7 +248,7 @@
 
         layer3 {
             bindings = <
-              &none           &mkp MCLK   &mkp LCLK   &ht <&paste> <&shift_paste>         &none             &none             &none             &msc SCRL_UP    &ht <&copy> <&shift_copy>    &none
+              &none           &mkp MCLK   &mkp LCLK   HT(&shift_paste,&paste)           &none             &none             &none               &msc SCRL_UP    HT(&shift_copy,&copy)      &none
               &msc SCRL_LEFT  &mo 5       &none       &mo 4                             &kp LSHFT         &mmv MOVE_LEFT    &mmv MOVE_DOWN      &mmv MOVE_UP    &mmv MOVE_RIGHT              &msc SCRL_RIGHT
               &kp LCTRL       &kp LGUI    &kp LALT    &msc SCRL_DOWN                    &mkp LCLK         &none             &mkp LCLK           &mkp MCLK       &mkp RCLK                    &kp LSHFT
             >;
