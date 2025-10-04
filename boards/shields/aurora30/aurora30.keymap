@@ -1,8 +1,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 2000  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 50    // default: 10
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 3000 
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 80   
 #include <dt-bindings/zmk/pointing.h>
 
 &mt {
@@ -10,9 +10,9 @@
 };
 
 &mmv {
-    time-to-max-speed-ms = <150>;
+    time-to-max-speed-ms = <200>;
     acceleration-exponent = <1>;
-    trigger-period-ms = <5>;
+    trigger-period-ms = <10>;
 };
 
 &msc {
