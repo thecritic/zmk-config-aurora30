@@ -1,8 +1,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 3000 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 80   
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 5000 
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 50   
 #include <dt-bindings/zmk/pointing.h>
 
 &mt {
