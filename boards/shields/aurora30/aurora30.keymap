@@ -135,7 +135,7 @@
         };
         combo_lbrc {
             timeout-ms = <20>;
-            key-positions = <12 13>;
+            key-positions = <2 12>;
             bindings = <&kp LBRC>;
             layers = <0>;
         };
@@ -157,9 +157,15 @@
             bindings = <&kp APOS>;
             layers = <0>;
         };
-        combo_lpar {
+        combo_rpar {
             timeout-ms = <20>;
             key-positions = <6 16>;
+            bindings = <&kp RPAR>;
+            layers = <0>;
+        };
+        combo_lpar {
+            timeout-ms = <20>;
+            key-positions = <3 13>;
             bindings = <&kp LPAR>;
             layers = <0>;
         };
