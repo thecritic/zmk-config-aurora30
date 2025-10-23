@@ -11,13 +11,13 @@
 
 &mmv {
     time-to-max-speed-ms = <270>;
-    acceleration-exponent = <2>;
-    trigger-period-ms = <14>;
+    acceleration-exponent = <1>;
+    trigger-period-ms = <4>;
 };
 
 &msc {
     time-to-max-speed-ms = <40>;
-    acceleration-exponent = <2>;
+    acceleration-exponent = <1>;
 };
 
 #define HT(hold, tap) &ht hold tap
