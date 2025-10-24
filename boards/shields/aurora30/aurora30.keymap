@@ -1,7 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 2500 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 4000 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20   
 #include <dt-bindings/zmk/pointing.h>
 
@@ -10,7 +10,7 @@
 };
 
 &mmv {
-    time-to-max-speed-ms = <200>;
+    time-to-max-speed-ms = <400>;
     acceleration-exponent = <2>;
     trigger-period-ms = <4>;
 };
