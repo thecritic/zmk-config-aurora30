@@ -23,3 +23,6 @@ include:
     shield: aurora30_left
   - board: nice_nano_v2
     shield: aurora30_right
+  - board: nice_nano_v2
+    shield: settings_reset
+
