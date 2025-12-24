@@ -91,6 +91,11 @@
 
     combos {
         compatible = "zmk,combos";
+        combo_bootloader {
+            timeout-ms = <TIMEOUT_COMBO>;
+            key-positions = <5 6 7>;
+            bindings = <&bootloader>;
+        };
         combo_bspc {
             timeout-ms = <TIMEOUT_COMBO>;
             key-positions = <6 7>;
