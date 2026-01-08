@@ -1,4 +1,4 @@
-if SHIELD_AURORA30_LEFT
+if SHIELD_AURORA30_RIGHT
 
 config ZMK_BLE
 	default y
