@@ -80,7 +80,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp LSHFT &macro_tap &kp RSHFT>
+                = <&macro_press &kp LSHFT &kp RSHFT>
+                , <&macro_release &kp LSHFT &kp RSHFT>
                 ;
         };
     };
@@ -262,7 +263,7 @@
         };
         combo_caret {
             timeout-ms = <TIMEOUT_COMBO>;
-            key-positions = <24 25>;
+            key-positions = <23 24>;
             bindings = <&kp CARET>;
             layers = <0>;
         };
