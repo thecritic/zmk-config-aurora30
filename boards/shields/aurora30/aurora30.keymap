@@ -4,13 +4,15 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 8000 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20   
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/bt.h>
+
 
 &mt {
     flavor = "tap-preferred";
 };
 
 &mmv {
-    time-to-max-speed-ms = <280>;
+    time-to-max-speed-ms = <260>;
     acceleration-exponent = <2>;
     trigger-period-ms = <2>;
 };
@@ -303,9 +305,9 @@
 
         layer1 {
             bindings = <
-              &none      &none        &none &none &none        &none    &none     &none   &none     &none
-              &none      &none        &none &none &none        &kp LEFT &kp DOWN  &kp UP  &kp RIGHT &none
-              &sys_reset &bootloader  &none &none &none        &none    &none     &none   &none     &none
+              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &none    &none     &none   &none     &none
+              &none         &none         &none         &none         &none               &kp LEFT &kp DOWN  &kp UP  &kp RIGHT &none
+              &sys_reset    &bootloader   &none         &none         &none               &none    &none     &none   &none     &none
             >;
         };
 
