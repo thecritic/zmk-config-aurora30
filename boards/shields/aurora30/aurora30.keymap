@@ -19,7 +19,7 @@
 
 &msc {
     time-to-max-speed-ms = <100>;
-    acceleration-exponent = <1>;
+    acceleration-exponent = <2>;
 };
 
 #define HT(hold, tap) &ht hold tap
