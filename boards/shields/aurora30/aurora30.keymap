@@ -28,11 +28,24 @@
             acceleration-exponent = <1>;
             trigger-period-ms = <8>;
         };
+        mmv_mid: mmv_mid {
+            compatible = "zmk,behavior-input-two-axis";
+            #binding-cells = <1>;
+            x-input-code = <INPUT_REL_X>;
+            y-input-code = <INPUT_REL_Y>;
+            time-to-max-speed-ms = <1500>;
+            acceleration-exponent = <1>;
+            trigger-period-ms = <8>;
+        };
     };
 
     mmv_slow_listener: mmv_slow_listener {
         compatible = "zmk,input-listener";
         device = <&mmv_slow>;
+    };
+    mmv_mid_listener: mmv_mid_listener {
+        compatible = "zmk,input-listener";
+        device = <&mmv_mid>;
     };
 };
 
@@ -341,7 +354,7 @@
         layer3 {
             bindings = <
               &to 0           &mkp MCLK   &mkp LCLK   &paste            &none             &none             &none               &msc SCRL_UP    &copy             &none
-              &msc SCRL_LEFT  &mo 5       &none       &mo 4             &kp LSHFT         &mmv MOVE_LEFT    &mmv MOVE_DOWN      &mmv MOVE_UP    &mmv MOVE_RIGHT   &msc SCRL_RIGHT
+              &msc SCRL_LEFT  &mo 5       &mo 6       &mo 4             &kp LSHFT         &mmv MOVE_LEFT    &mmv MOVE_DOWN      &mmv MOVE_UP    &mmv MOVE_RIGHT   &msc SCRL_RIGHT
               &kp LCTRL       &kp LGUI    &kp LALT    &msc SCRL_DOWN    &mkp LCLK         &click_rt         &mkp LCLK           &mkp MCLK       &mkp RCLK         &kp LSHFT
             >;
         };
@@ -356,17 +369,17 @@
 
         layer5 {
             bindings = <
-              &none &none &none &none &none    &kp LG(J)              &kp LG(L)                 &none                 &none                 &none
-              &none &none &none &none &none    &mmv_slow MOVE_LEFT    &mmv_slow MOVE_DOWN       &mmv_slow MOVE_UP     &mmv_slow MOVE_RIGHT  &none
-              &none &none &none &none &none    &none                  &kp LG(K)                 &kp LG(H)             &none                 &none
+              &none &none &none &none &none         &kp LG(J)              &kp LG(L)                 &none                 &none                 &none
+              &none &none &none &none &none         &mmv_slow MOVE_LEFT    &mmv_slow MOVE_DOWN       &mmv_slow MOVE_UP     &mmv_slow MOVE_RIGHT  &none
+              &none &none &none &none &mkp LCLK     &none                  &kp LG(K)                 &kp LG(H)             &none                 &none
             >;
         };
 
         layer6 {
             bindings = <
-              &kp F1  &kp F2  &kp F3  &kp F4  &kp F5      &kp LG(LC(B))   &kp LG(LC(P))   &kp LG(LC(U))     &kp LG(LC(Y))   &kp LG(LC(SEMI))
-              &kp F6  &kp F7  &kp F8  &kp F9  &kp F10     &none           &none           &none             &none           &none
-              &none   &none   &none   &kp F11 &kp F12     &none           &none           &none             &bootloader     &sys_reset
+              &kp F1  &kp F2  &kp F3  &kp F4  &kp F5      &kp LG(LC(B))         &kp LG(LC(P))         &kp LG(LC(U))     &kp LG(LC(Y))         &kp LG(LC(SEMI))
+              &kp F6  &kp F7  &kp F8  &kp F9  &kp F10     &mmv_mid MOVE_LEFT    &mmv_mid MOVE_DOWN    &mmv_mid MOVE_UP  &mmv_mid MOVE_RIGHT   &none
+              &none   &none   &none   &kp F11 &kp F12     &none                 &none                 &none             &bootloader           &sys_reset
             >;
         };
     };
