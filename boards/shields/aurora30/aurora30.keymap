@@ -18,12 +18,14 @@
 };
 
 / {
-    mmv_slow: mmv_slow {
-        compatible = "zmk,behavior-mouse-move";
-        #binding-cells = <1>;
-        time-to-max-speed-ms = <500>;
-        acceleration-exponent = <1>;
-        trigger-period-ms = <8>;
+    behaviors {
+        mmv_slow: mmv_slow {
+            compatible = "zmk,behavior-mouse-move";
+            #binding-cells = <1>;
+            time-to-max-speed-ms = <500>;
+            acceleration-exponent = <1>;
+            trigger-period-ms = <8>;
+        };
     };
 };
 
