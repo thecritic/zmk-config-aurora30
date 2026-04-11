@@ -29,6 +29,11 @@
             trigger-period-ms = <8>;
         };
     };
+
+    mmv_slow_listener: mmv_slow_listener {
+        compatible = "zmk,input-listener";
+        device = <&mmv_slow>;
+    };
 };
 
 &msc {
