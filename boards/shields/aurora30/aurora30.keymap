@@ -379,7 +379,7 @@
             bindings = <
               &kp F1  &kp F2  &kp F3  &kp F4  &kp F5      &kp LG(LC(B))         &kp LG(LC(P))         &kp LG(LC(U))     &kp LG(LC(Y))         &kp LG(LC(SEMI))
               &kp F6  &kp F7  &kp F8  &kp F9  &kp F10     &mmv_mid MOVE_LEFT    &mmv_mid MOVE_DOWN    &mmv_mid MOVE_UP  &mmv_mid MOVE_RIGHT   &none
-              &none   &none   &none   &kp F11 &kp F12     &none                 &none                 &none             &bootloader           &sys_reset
+              &none   &none   &none   &kp F11 &mkp LCLK   &none                 &none                 &none             &bootloader           &sys_reset
             >;
         };
     };
