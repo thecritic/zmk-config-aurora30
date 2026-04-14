@@ -24,7 +24,7 @@
             #binding-cells = <1>;
             x-input-code = <INPUT_REL_X>;
             y-input-code = <INPUT_REL_Y>;
-            time-to-max-speed-ms = <3000>;
+            time-to-max-speed-ms = <2000>;
             acceleration-exponent = <1>;
             trigger-period-ms = <8>;
         };
@@ -33,7 +33,7 @@
             #binding-cells = <1>;
             x-input-code = <INPUT_REL_X>;
             y-input-code = <INPUT_REL_Y>;
-            time-to-max-speed-ms = <1500>;
+            time-to-max-speed-ms = <1000>;
             acceleration-exponent = <1>;
             trigger-period-ms = <8>;
         };
